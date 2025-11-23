@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Flor CSS</title>
+    <style>
+        /* ===================================
+        Estilos CSS para la Flor
+        ===================================
+        */
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .flor {
+            /* Contenedor principal para la cabeza de la flor */
+            position: relative; 
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0; /* Ajusta la posición para el tallo */
+        }
+
+        /* --- Estilo de los Pétalos --- */
+        .petalo {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            background-color: #ff69b4; /* Rosa brillante */
+            border-radius: 50% 50% 0 50%; /* Forma de pétalo */
+            top: 10px; /* Ajuste vertical */
+            left: 30px; /* Ajuste horizontal */
+            /* Define el punto de rotación en la base del pétalo */
+            transform-origin: 50% 100%; 
+        }
+
+        /* Rotación para posicionar los 5 pétalos en círculo */
+        .petalo-1 { transform: rotate(0deg); }
+        .petalo-2 { transform: rotate(72deg); }
+        .petalo-3 { transform: rotate(144deg); }
+        .petalo-4 { transform: rotate(216deg); }
+        .petalo-5 { transform: rotate(288deg); }
+
+
+        /* --- Estilo del Centro --- */
+        .centro {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #ffd700; /* Amarillo dorado */
+            border-radius: 50%; /* Círculo perfecto */
+            top: 65px; 
+            left: 30px;
+            z-index: 10; /* Asegura que esté por encima de los pétalos */
+            border: 2px solid #ccab00; /* Borde oscuro para contraste */
+        }
+
+        /* --- Estilo del Tallo --- */
+        .tallo-contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tallo {
+            width: 10px;
+            height: 150px; /* Altura del tallo */
+            background-color: #38761d; /* Verde oscuro */
+            margin-top: -10px; /* Para que el tallo se superponga ligeramente con la flor */
+            border-radius: 0 0 5px 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="tallo-contenedor">
+        <div class="flor">
+            <div class="petalo petalo-1"></div>
+            <div class="petalo petalo-2"></div>
+            <div class="petalo petalo-3"></div>
+            <div class="petalo petalo-4"></div>
+            <div class="petalo petalo-5"></div>
+            
+            <div class="centro"></div>
+        </div>
+
+        <div class="tallo"></div>
+    </div>
+
+</body>
+</html>
