@@ -8,6 +8,31 @@
         Estilos CSS para la Flor
         ===================================
         */
+        .mensaje-contenedor {
+        text-align: center;
+        margin-bottom: 50px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* --- Estilo del Título Principal --- */
+    .titulo-mensaje {
+        color: #8b0000; /* Rojo oscuro */
+        font-size: 36px;
+        margin: 0;
+    }
+
+    /* --- Estilo del Subtítulo y la Fecha --- */
+    .subtitulo-mensaje {
+        color: #333; /* Gris oscuro */
+        font-size: 18px;
+        margin: 5px 0 0 0;
+    }
+    
+    .fecha-mensaje {
+        color: #666; /* Gris medio */
+        font-size: 14px;
+        margin-top: 5px;
+    }
 
         body {
             display: flex;
@@ -16,11 +41,6 @@
             min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-        }
-        .titulo-mensaje {
-            color: #8b0000; /* Color rojo */
-            font-family: Arial, sans-serif;
-            margin-bottom: 50px; /* Espacio entre el mensaje y la flor */
         }
 
         .flor {
@@ -83,6 +103,11 @@
     </style>
 </head>
 <body>
+    <div class="mensaje-contenedor">
+        <h1 class="titulo-mensaje">Hello World</h1>
+        <p class="subtitulo-mensaje">Esta es mi primera pagina Web.</p>
+        <p class="fecha-mensaje">23/11/2025</p>
+    </div>
 
     <div class="tallo-contenedor">
         <div class="flor">
@@ -100,4 +125,5 @@
 
 </body>
 </html>
+
 
